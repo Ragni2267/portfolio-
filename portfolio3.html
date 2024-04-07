@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Document</title>
+    <link rel="stylesheet" media="screen and (max-width:800px)" href="table.css">
+</head>
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+html{
+    scroll-behavior: smooth;
+}
+
+.navbar{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(0,0,0,0.5);
+        position: sticky;
+        top: 0;
+}
+.navbar ul{
+    display: flex;
+    list-style: none;
+    margin: 20px 0;
+}
+.navbar ul li{
+        font-family: century;
+        font-size: 1.1rem;
+        font-weight: bold;
+}
+.navbar ul li a{
+    text-decoration: none;
+    color: white;
+    padding: 8px 25px;
+    transition: all .5s ease;
+}
+.navbar ul li a:hover{
+    background-color: white;
+    color: black;
+    box-shadow: 0 0 10px white;
+}
+ #home{
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0,0,0,0.5);
+    height: 840px;
+    justify-content: center;
+    align-items: center;
+    color: white;
+ }
+ #home::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: url('main.avif') no-repeat center center/cover;
+    height: 900px;
+    width: 100%;
+    z-index: -1;
+    opacity: .8;
+ }
+ .main{
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid white; */
+    align-items: center;
+    position: absolute;
+    top: 30%;
+    right: 10%;
+
+ }
+ .headings{
+    font-family: century;
+    font-size: 3rem;
+    text-align: center;
+    margin: 40px 0px;
+ }
+ .btn{
+    padding: 10px 35px;
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    outline:none;
+    transition: .6s ease;
+ }
+ .btn:hover{
+    cursor: pointer;
+    background-color: white;
+    color: black;
+    box-shadow: 0 0 5px white,0 0 10px white,0 0 15px white;
+    font-weight: bold;
+ }
+ #about{
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 20px;
+    margin-bottom: 50px;
+    font: 1em Sans-Serif;
+ }
+ #pic{
+    display: flex;
+ }
+ #pic img{
+    width: 575px;
+    height: 400px;
+ }
+ #intro{
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    padding: 10px;
+ }
+ #intro h2{
+    font-size: 2rem;
+    margin-bottom: 20px;
+ }
+ #portfolio{
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0,0,0,0.9);
+    color: white;
+    align-items: center;
+    padding: 20px;
+ }
+ .gallery{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    box-sizing: border-box;
+    margin: 10px;
+    
+ }
+ .gallery img{
+    width: 360px;
+    height: 240px;
+    /* background:linear-gradient(rgba(0,0,0,.1),var(--main-color)); */
+    transition: transform 1s ease;
+    overflow: hidden;
+    filter:greyscale(1);
+
+    
+ }
+
+.gallery img:hover{
+    transform:scale(1.1);
+    filter:greyscale(0);
+}
+
+ #services{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+ }
+ .row{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+ }
+ .box{
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    height: 450px;
+    border: 1px solid black;
+    margin: 10px;
+    align-items: center;
+    text-align: justify;
+    padding: 10px;
+    border-radius: 15px;
+    background: linear-gradient(to top,rgb(255,45,45)50%,white 50%);
+    background-size:100% 200% ;
+    transition: all .8s;
+ }
+ .box:hover{
+    background-position: left bottom;
+    color: white;
+    border: none;
+    box-shadow: 0 0 20px rgb(255,45,45);
+ }
+ .box img{
+    width: 80px;
+    height: 80px;
+    background-color: white;
+    padding: 10px;
+ }
+ #contact{
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    background-color: rgba(0,0,0,0.9);
+    color: white;
+    padding: 20px;
+ }
+ .form{
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    align-items: center;
+    margin: 20px 0;
+ }
+ .input{
+    padding: 12px;
+    margin: 15px;
+    width: 30%;
+    border: none;
+    outline: none;
+ }
+ #msg{
+    width: 20%;
+    padding: 10px;
+    margin: 15px;
+    border: none;
+    outline: none;
+ }
+ #send{
+    padding: 10px;
+    width: 10%;
+    margin: 40px;
+    border: none;
+    outline: none;
+
+}
+#send:hover{
+    cursor: pointer;
+    box-shadow: 0 0 10px white;
+}
+#interest{
+  color: rgb(6, 236, 167);
+  margin-left: 10px; 
+}
+.inlineint{
+    display: inline;
+}
+.interestword{
+    margin-left: 5px;
+}
+#profile{
+    margin-top: 60px;
+    margin-left: 50px;
+    color: rgb(89, 2, 57);
+    letter-spacing: 1px;}
+    .list{
+    list-style: none;}
+    conedu{
+    margin-top: 100px;
+    font-size: 25px;
+    color: white;
+    margin-left: 15px;
+}
+</style>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About me</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact me</a></li>
+        </ul>
+    </nav>
+    <section id="home">
+        <div class="main">
+            <h1 class="headings">I AM <br> RAGNI NAGPAL</h1>
+            <button class="btn">My Details</button>
+        </div>
+        <H2 id="profile"><b><u>INTEREST</u></b></H2>
+        <ul class="list">
+            <li class="inlineint"><i class="fa-solid fa-road" id="interest"></i><b class="interestword">Travelling</b></li>
+            <li class="inlineint"><i class="fa fa-pencil" id="interest"></i><b class="interestword">Writing</b></li>
+            <li class="inlineint"><i class="fa-solid fa-book" id="interest"></i><b class="interestword">Reading</b></li>
+            <li class="inlineint"><i class="fa fa-cutlery" id="interest"></i><b class="interestword">Cooking</b>
+        </ul>
+        <!-- <button type="button" id="printb" onclick="printPage()"><i id="printic" class="fa-solid fa-print"></i>Print Page</button> -->
+    </div>  
+        
+            
+           </section>
+    <section id="about">
+        <div id="pic"> 
+            <h1 class="headings">ABOUT ME</h1>
+            <img src="me.png" alt="">
+            <div id="intro">
+                <h2>RAGNI NAGPAL</h2>
+                <p>Driven by desire to make positive impact, I thrive in problem-solving environments. Whether it's tackling complex assignments,collaborating on team projects,or delving into real-world challenges. I approach each task with a blend of analytical thinking and creativity.
+                    My goal is not just to excel academically but to apply my skills to real-world situations and contribute meaningfully. Beyond my academic pursuits, I am a firm believer in the power of holistic growth. My diverse interests range from dance to graphic design, allowing me to blend the rhythm of movement with the creativity of visual expression, creating a harmonious balance between physical and artistic pursuits. </p>
+                    <h3>CONTACT INFO</h3>
+                    <p> Contact no:9350847992</p>
+                    <p> Email:ragni2267.be23@chitkara.edu.in</p>
+                    <p> Insta id:ragni_nagpal</p>
+                    <p> Location:Ambala,Haryana</p>
+                    <h3>EDUCATION</h3>
+                    <P>Year:2023-2027</P>
+                    <p>Study:Bachelor in Computer Science</p>
+                    <p>University:Chitkara University</p>
+                    <h3 class="conedu">Languages:</h3>
+            <ul class ="list">
+                <li>
+                    <span class="lang">English</span>
+                    <p id ="percenteng"></p>
+                </li>
+                <li>
+                    <span class="lang">Hindi</span>
+                    <p id ="percenthin"></p>
+                </li>  
+                <li>
+                    <span class="lang">Punjabi</span>
+                    <p id="percentpun"></p>
+                </li> 
+            </ul>
+        </div>
+
+            </div>
+        </div>
+    </section>
+    <section id="portfolio">
+        <h1 class="headings">PORTFOLIO</h1>
+        <div class="gallery">
+            <img src="coding ninja.png" alt="">
+            <img src="b.png" alt="">
+            <img src="c.png" alt="">
+            <img src="n.png" alt="">
+            <img src="p.png" alt="">
+            <img src="o.png" alt="">
+        </div>
+    </section>
+    <section id="services">
+        <h1 class="headings">SERVICES</h1>
+        <div class="row">
+            <div class="box">
+                <img src="website.avif" alt="">
+                <h1 class="headings">Website Design</h1>
+                <p>Web design involves creating the visual elements and layout of a website, while coding involves translating these designs into a functional website using programming languages like HTML, CSS, and JavaScript. Typically, dedicated web developers translate the designs to code 
+
+                    </p>
+                <p class="cer"><b>Projects :</b></p>
+                <p >1. Digital watch 
+                    2.CHOCOLATE CHIP COOKIES
+                    3.Product
+                </p>
+            </div>
+            <div class="box">
+                <img src="cn.jpg" alt="">
+            <h1 class="headings">Coding Ninja <br>  Design </h1>
+            <p> One of the best feature of coding ninjas that I experienced is their quality of questions and projects. The assignments and projects are major game changer that can stand you apart from those who also have learned the courses from other institutes.      </p>
+                <p class="cer"><b>Python Development:</b></p>
+                <p class="tex1">Completed Python course from Coding Ninjas <br><a class="link" onclick="alert1()" target="_blank" href="C:\Users\hp\Pictures\coding ninja.png"><b>Click Here For Certificate</b></a></p>
+            </div>
+            <div class="box">
+                <img src="courseera.jpg" alt="">
+            <h1 class="headings">Coursera</h1>
+                <p>Coursera is an online learning platform featuring courses, degrees, certificate programs, and tutorials in a wide range of subjects. Over 300 leading universities and companies provide instruction, including Stanford, Duke, Google, and IBM.</p>
+                <p class="cer"><b>Design Thinking</b> :</b></p>
+                <p class="tex1">Completed Design Thinking course  <br> <a class="link" onclick="alert1()" target="_blank" href="file:///C:/Users/hp/Pictures/videos/Coursera%20certificate2.pdf"><b>Click Here For Certificate</b></a></p>
+                <p class="cer"><b>Cybersecurity :</b></p>
+                <p class="tex1">Completed Cybersecurity  Coursera <br> <a class="link" onclick="alert1()" target="_blank" href="file:///C:/Users/hp/Pictures/videos/cyber%201.pdf"><b>Click Here For Certificate</b></a></p>
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <h1 class="headings">CONTACT</h1>
+        <form action="" class="form">
+            <input type="text" name="name" class="input" placeholder="Enter your name">
+            <input type="email" name="email" class="input" placeholder="Enter your Email">
+            <textarea name="msg" id="msg" cols="30" rows="10" placeholder="Enter your Message"></textarea>
+            <input type="submit" view="SEND" id="send">
+        </form>
+    </section>
+    
+</body>
+</html>
